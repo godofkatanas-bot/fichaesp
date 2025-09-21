@@ -2,7 +2,8 @@ import random
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, CallbackQueryHandler, ConversationHandler
 
-TOKEN = "7576812773:AAFvyIVCKG4G3QkYmROxAz4wnc__l6iZDTA"
+import os
+TOKEN = os.getenv("TOKEN")
 
 ESCOLHER_RACA, ESCOLHER_ORIGEM = range(2)
 
@@ -141,3 +142,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
